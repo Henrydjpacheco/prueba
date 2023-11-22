@@ -4,15 +4,15 @@ const controllers = require("../controllers");
 
 const router = Router();
 //---------------------------categories
-router.get("/",controllers.listCategories);
-/* 
-router.get("/:id"); */
-router.post("/", controllers.createCategory);
+router.get("/categories",controllers.listCategories);
+router.get("/categories:id", controllers.getCategory); 
+router.post("/categories", controllers.createCategory);
+router.put("/categories", controllers.UpdateCategory)
 
 //--------------------------------subCategory--------------------------------
 
-router.get("/sub",controllers.list)
-router.post("/sub", controllers.createSubcategory);
+router.get("/subcategory",controllers.listSubCategory)
+router.post("/subcategory", controllers.createSubcategory);
 
 
 //---------------------- theme
